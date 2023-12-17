@@ -6,10 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:12:24 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/11 13:23:43 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:40:37 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+   #include"libft.h"
    int ft_toupper(int c)
    {
     if(c >= 'a' && c<= 'z')

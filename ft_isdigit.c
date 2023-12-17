@@ -6,10 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 08:00:02 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/11 08:00:28 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:38:51 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 int ft_isdigit(int n)
 {
     if (n>='0' && n<= '9')

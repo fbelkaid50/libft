@@ -6,14 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 11:01:32 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/15 23:25:12 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:39:19 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
-#include <stdio.h>
-#include "libft.h"
-// #include<string.h>
+#include"libft.h"
 char *ft_strdup(const char *s1)
 {
     size_t len;
@@ -39,11 +36,4 @@ char *ft_strdup(const char *s1)
     else
         return NULL;
 }
-// int main ()
-// {
-//     char a[]="hellow beauty";
-//     char *v;
-//     v=ft_strdup(a);
-//     printf("%s",v);
-//     free (v);
-// }
+

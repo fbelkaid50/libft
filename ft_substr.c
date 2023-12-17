@@ -6,12 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 07:41:26 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/14 11:05:08 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:40:21 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
- #include <stdio.h>
+#include"libft.h"
 char* ft_substr(char const* s, unsigned int start, size_t len)
 {
 	size_t	i;
@@ -36,21 +35,3 @@ char* ft_substr(char const* s, unsigned int start, size_t len)
 	sub[j] = '\0';
 	return (sub);
 }
-// #include <string.h>
-// int main() {
-//     char s1[] = "helkmjnfg";
-//     int c = 6;
-//     char *p1;
-
-//     // Use sizeof(char) is unnecessary, just pass 1 as the length
-//     p1 = ft_substr(s1, c, 6);
-
-//     if (p1 != NULL) {
-//         printf("%s\n", p1);
-//         free(p1); // Free the allocated memory when done using it
-//     } else {
-//         printf("Memory allocation failed\n");
-//     }
-
-//     return 0;
-// }

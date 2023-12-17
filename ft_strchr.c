@@ -6,13 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:25:03 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/15 23:58:14 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:39:09 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include"libft.h"
 char *ft_strchr(const char *s, int c)
 {
   if (!s)
@@ -28,14 +26,3 @@ char *ft_strchr(const char *s, int c)
       return tmp;
   return 0;
 }
-
-// int main()
-// {
-//     char    str3[] = "";
-//     char *str;
-//     if (!(str = strchr(str3, '\0')))
-//         printf("NULL");
-//     if (!(str = ft_strchr(str3, '\0')))
-//         printf("NULL");
-    
-// }

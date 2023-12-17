@@ -6,10 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 07:49:57 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/15 21:21:51 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:38:30 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 int ft_atoi( const char *str)
 {
     int sign;
@@ -34,13 +35,3 @@ int ft_atoi( const char *str)
     }
     return (num * sign);
 }
-// int main() 
-// {
-// char c[]="--------+-+-+-8";
-// int d;
-// d =ft_atoi(c);
-// int j ;
-// j = atoi(c);
-// printf("%d",d);
-// printf("%d",j);
-// }
