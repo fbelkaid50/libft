@@ -6,13 +6,12 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 12:42:16 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/15 17:40:49 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/15 23:26:04 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include<stdio.h>
+
+#include"libft.h"
 
 // char *ft_strtrim(const char *s1, const char *set) {
 //     if (!s1 || !set)
@@ -76,60 +75,19 @@
 // 	ret = ft_substr(start, 0, end - start);
 // 	return (ret);
 // }
-char* ft_substr(char const* s, unsigned int start, size_t len)
-{
-	size_t	i;
-	size_t	j;
-	char* sub;
-
-	i = 0;
-	j = 0;
-	if (!s)
-		return (NULL);
-	if (!(sub = (char*)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	while (s[i])
-	{
-		if (i >= start && j < len)
-		{
-			sub[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	sub[j] = '\0';
-	return (sub);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-
-	if (!s1 || !set)
-		return (0);
-	i = 0;
-	while (s1[i] && strchr(set, *s1))
-    {
-        printf("first %c\n", *s1);
-		i++;
-
-    }
-    i = 0;
-	i = strlen(s1)-1;
-	while (i > 0 && strchr(set, s1[i]))
-    {
-        printf(" second %c\n", s1[i]);
-		i--;
-
-    }
-    
-	return (ft_substr(s1, 0, i + 1));
-}
-int main ()
-{
-    char s1[]="world !wowr!ld!!";
-    char c[]="world!";
-    
-    char *ptr=ft_strtrim(s1,c);
-    printf ("%s",ptr);
+	size_t	start, end;
+    if (!s1 || !set)
+       return NULL;
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while(s1[start] != '\0' && ft_strchr(set, s1[start]))
+		start++;
+	if (start == end + 1)
+		return ft_strdup("");
+	while(s1[end] && ft_strchr(set, s1[end]))
+		end--;	
+	return(ft_substr(s1, start, end - start +1));
 }

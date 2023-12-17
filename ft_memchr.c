@@ -6,13 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 22:05:25 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/13 08:14:56 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/17 07:58:51 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include<string.h>
+#include "stdio.h"
  void *ft_memchr(const void *s, int c, size_t n)
  {
     size_t i;
@@ -33,15 +31,15 @@
     
  }
 
-int main ()
-{
-    char s1[]="hellow beauty";
-    int c1 =108;
-    size_t i1 = sizeof(s1);
-    const char *p;
-    const  char *p1;
-    p1=ft_memchr(s1,c1,i1);
-    p =memchr(s1,c1,i1 );
-    printf("%s\n",p);
-    printf("%s",p1);
-}
+// int main ()
+// {
+//     char s1[]="hellow beauty";
+//     int c1 =108;
+//     size_t i1 = sizeof(s1);
+//     const char *p;
+//     const  char *p1;
+//     p1=ft_memchr(s1,c1,i1);
+//     p =memchr(s1,c1,i1 );
+//     printf("%s\n",p);
+//     printf("%s",p1);
+// }

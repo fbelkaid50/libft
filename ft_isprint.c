@@ -6,14 +6,14 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 08:00:11 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/11 08:00:24 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/15 23:38:09 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_isprint(int n)
 {
-    if (n >= 33 && n <= 125 )
-    return 1;
-    else 
-    return 0;
+    if (n >= 32 && n <= 126)
+        return 1;
+    else
+        return 0;
 }

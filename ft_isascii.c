@@ -6,13 +6,13 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 07:59:53 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/11 08:00:33 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/15 23:36:26 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii (int n)
+int ft_isascii(int n)
 {
-    if(n >= 1 && n <= 127)
+    if (n >= 0 && n <= 127)
         return 1;
-        return 0;
+    return 0;
 }
