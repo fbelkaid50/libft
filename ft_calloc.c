@@ -6,33 +6,31 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 08:09:16 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/13 14:35:19 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/29 23:54:39 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-void *ft_calloc (size_t count , size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void *ptr;
-    size_t len;
-    
-    len = size * count;
-    ptr = malloc(len);
-       if(ptr != NULL)
-       {
-            if(ft_memset (ptr,0,len)==ptr)
-            return ptr;
-            else 
-                {
-                    free(ptr); 
-                    return NULL;
-                }
-        }
-        else 
-            return NULL;
+	void	*ptr;
+	size_t	len;
+
+	len = size * count;
+	ptr = malloc(len);
+	if (ptr != NULL)
+	{
+		if (ft_memset(ptr, 0, len) == ptr)
+			return (ptr);
+		else
+		{
+			free(ptr);
+			return (NULL);
+		}
+	}
+	else
+		return (NULL);
 }
 // #include<stdio.h>
 // #include<stdlib.h>
@@ -51,7 +49,7 @@ void *ft_calloc (size_t count , size_t size)
 //         printf("Memory allocation failed\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }
 
 // int main()

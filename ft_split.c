@@ -6,55 +6,100 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:46:18 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/17 23:44:40 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/30 19:48:16 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
+#include <stdlib.h>
 
-static size_t	count_words(char const *s, char c)
+static char	**free_array(char **ptr, int i)
 {
-	size_t	i;
-	size_t	count;
+	while (i > 0)
+	{
+		i--;
+		free(ptr[i]);
+	}
+	free(ptr);
+	return (NULL);
+}
+
+static int	ft_count_words(char const *str, char c)
+{
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
-		while (s[i] == c)
+		if (str[i] == c)
 			i++;
-		if (s[i])
+		else
+		{
 			count++;
-		while (s[i] != c && s[i])
-			i++;
+			while (str[i] && str[i] != c)
+				i++;
+		}
 	}
 	return (count);
 }
-char			**ft_split(char const *s, char c)
+
+static char	*ft_putword(char const *s, int start, int len)
 {
-	size_t i;
-	size_t j;
-	size_t a;
-	char **str;
+	char	*word;
+	int		i;
 
-	if (!s || !c ||
-		!(str = (char **)malloc((count_words(s, c) + 1) * sizeof(char *))))
-		return (0);
-	i=0;
-	j=0;
-	a=0;
-
-	while (a<count_words(s,c))
+	i = 0;
+	word = (char *)malloc(len + 1);
+	if (word == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		while(s[i]== c)
+		word[i] = s[start + i];
 		i++;
-		j=i;
-	while(s[j]!=c && s[j])
-		j++;
-	str[a]=ft_substr(s,i,j-i);
-	i=j;
-	a++;
 	}
-	str[a] = 0;
-	return (str);
+	word[len] = '\0';
+	return (word);
 }
+
+char	**ft_split(const char *s, char c)
+{
+	char	**result;
+	int		i;
+	int		j;
+	int		len;
+
+	result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!result || !s)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (i < ft_count_words(s, c))
+	{
+		while (s[j] == c)
+			j++;
+		len = 0;
+		while (s[j + len] != c && s[j + len] != '\0')
+			len++;
+		result[i] = ft_putword(s, j, len);
+		if (!result[i])
+			return (free_array(result, i));
+		i++;
+		j += len;
+	}
+	result[i] = NULL;
+	return (result);
+}
+
+// int main ()
+// {
+// 	char *c = "hello!";
+// 	char **res;
+// 	res= ft_split(c,' ');
+// 	while (*res)
+// 	{
+// 	printf("%s\n",*res);
+// 	res ++;
+// 	}
+// }

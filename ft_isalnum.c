@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int ft_isalnum (int n)
+int	ft_isalnum(int n)
 {
-    if((ft_isdigit(n)) || (ft_isalpha(n)))
-    return 1;
-    return 0;
+	if ((ft_isdigit(n)) || (ft_isalpha(n)))
+		return (1);
+	return (0);
 }
 // int main ()
 // {
@@ -31,24 +31,24 @@ int ft_isalnum (int n)
 //         else
 //         {
 //             alphnum=0;
-//             break;
+//             break ;
 //         }
 //     }
 //     if (alphnum)
 //     printf ("1");
-//     else 
+//     else
 //     printf("0");
 // }
 // int  ft_isdigit(int n);
 // {
-//     if (n>='0' && n<= '9') 
-//     return 1;
-//     return 0;
+//     if (n>='0' && n<= '9')
+//     return (1);
+//     return (0);
 // }
 // int ft_isalpha(int d);
 
 // {
 //     if ((d >='a' && d<= 'z') || (d>= 'A' && d<= 'Z'))
-//     return 1;
-//     return 0;
+//     return (1);
+//     return (0);
 // }

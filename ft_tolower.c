@@ -6,14 +6,15 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:24:08 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/17 10:40:29 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/29 21:26:39 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-int ft_tolower(int c)
-   {
-    if(c >= 'A' && c<= 'Z')
-     c+= 32;
-     return c ;
-   }
+#include "libft.h"
+
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
+}

@@ -6,13 +6,15 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 08:00:38 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/11 08:00:41 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/29 19:33:39 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int n)
+#include "libft.h"
+
+int	ft_isalpha(int n)
 {
-    if ((n >='a' && n<= 'z') || (n>= 'A' && n<= 'Z'))
-    return 1;
-    return 0;
+	if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z'))
+		return (1);
+	return (0);
 }

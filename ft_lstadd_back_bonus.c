@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 18:44:43 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/15 21:27:08 by fbelkaid         ###   ########.fr       */
+/*   Created: 2023/12/29 17:06:18 by fbelkaid          #+#    #+#             */
+/*   Updated: 2023/12/29 17:06:20 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-int main()
+#include "libft.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    char dst1[] = "ana";
-    char src1[] = "abcde";
-    int i = ft_strlcpy(dst1, src1, 3);
-    printf("%d\n", i);
-    int i2 = strlcpy(dst1, src1, 3);
-    printf("%d", i2);
+	t_list	*current;
+
+	if (!new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	current = ft_lstlast(*lst);
+	current->next = new;
 }
+
+// int main ()
+// {
+//     t_list *node=ft_lstnew("hellow madafaker !") ;
+//     t_list *add=ft_lstnew("fuck u!");
+//     ft_lstadd_back(&node,add);
+//     printf("%s\n",(char *)node->content);
+// }

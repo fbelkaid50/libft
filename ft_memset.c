@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 21:57:39 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/15 22:00:07 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/29 16:47:54 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@ void	*ft_memset(void *a, int c, size_t len)
 	b = (unsigned char *)a;
 	while (i < len)
 	{
-		b[i] = c;
+		b[i] = (unsigned char)c;
 		i++;
 	}
 	return (b);
 }
-
-
-
