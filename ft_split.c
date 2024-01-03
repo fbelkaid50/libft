@@ -11,95 +11,81 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static char	**free_array(char **ptr, int i)
+static int	ft_check(char const *s, char c)
 {
-	while (i > 0)
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
-		i--;
-		free(ptr[i]);
+		if (s[i++] != c)
+		{
+			if (s[i] == c || s[i] == '\0')
+				j++;
+		}
 	}
-	free(ptr);
+	return (j);
+}
+
+static int	ft_comp(const char *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != c && s[i])
+		i++;
+	return (i);
+}
+
+static void	*ft_free_all(char **p, int a)
+{
+	while (a >= 0)
+	{
+		free(p[a]);
+		a--;
+	}
+	free(p);
 	return (NULL);
 }
 
-static int	ft_count_words(char const *str, char c)
+char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == c)
-			i++;
-		else
-		{
-			count++;
-			while (str[i] && str[i] != c)
-				i++;
-		}
-	}
-	return (count);
-}
-
-static char	*ft_putword(char const *s, int start, int len)
-{
-	char	*word;
-	int		i;
-
-	i = 0;
-	word = (char *)malloc(len + 1);
-	if (word == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		word[i] = s[start + i];
-		i++;
-	}
-	word[len] = '\0';
-	return (word);
-}
-
-char	**ft_split(const char *s, char c)
-{
-	char	**result;
-	int		i;
+	char	**p;
+	int		a;
 	int		j;
-	int		len;
 
-	result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
-	if (!result || !s)
+	a = 0;
+	if (!s)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (i < ft_count_words(s, c))
+	j = ft_check(s, c);
+	p = malloc((j + 1) * sizeof(char *));
+	if (!p)
+		return (NULL);
+	while (a < j)
 	{
-		while (s[j] == c)
-			j++;
-		len = 0;
-		while (s[j + len] != c && s[j + len] != '\0')
-			len++;
-		result[i] = ft_putword(s, j, len);
-		if (!result[i])
-			return (free_array(result, i));
-		i++;
-		j += len;
+		while (*s == c && *s)
+			s++;
+		p[a] = ft_substr(s, 0, ft_comp(s, c));
+		if (!p[a])
+			return (ft_free_all(p, a));
+		while (*s != c && *s != '\0')
+			s++;
+		a++;
 	}
-	result[i] = NULL;
-	return (result);
+	p[a] = NULL;
+	return (p);
 }
-
-// int main ()
-// {
-// 	char *c = "hello!";
-// 	char **res;
-// 	res= ft_split(c,' ');
-// 	while (*res)
-// 	{
-// 	printf("%s\n",*res);
-// 	res ++;
-// 	}
-// }
+int main ()
+{
+	char *c = "ouhci lis 0 siudutfud0 uhdiudiud0 d0d doihdd0dwdad00d";
+	char **res;
+	res= ft_split(c,'0');
+	while (*res)
+	{
+	printf("%s\n",*res);
+	res ++;
+	}
+}
