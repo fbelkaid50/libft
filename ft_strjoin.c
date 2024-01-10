@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 11:10:42 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/29 21:22:49 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/04 01:43:51 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res = (char *)malloc(t_len + 1);
 	if (!res)
 		return (NULL);
-	strlcpy(res, s1, s1_len + 1);
-	strlcpy(res + s1_len, s2, s2_len + 1);
+	ft_strlcpy(res, s1, s1_len + 1);
+	ft_strlcat(res + s1_len, s2, s2_len + 1);
 	return (res);
 }

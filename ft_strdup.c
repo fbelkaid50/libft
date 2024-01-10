@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 11:01:32 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/17 10:39:19 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/04 02:22:18 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,9 @@ char	*ft_strdup(const char *s1)
 		{
 			*res = *s1;
 			i++;
-			res++;
 			s1++;
+			res++;
 		}
-		*res = '\0';
 		return ((char *)ptr);
 	}
 	else

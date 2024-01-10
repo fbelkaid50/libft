@@ -6,11 +6,11 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 21:28:02 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/29 19:28:13 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/04 02:37:26 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

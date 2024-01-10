@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 19:54:31 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/28 19:54:52 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2023/12/30 20:28:35 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (tmp);
 }
-// int main ()
-// {
-//     t_list *node0=ft_lstnew("como esta");
-//     t_list *node1=ft_lstnew("hola");
-//     t_list *node2=ft_lstnew("hellow");
-//     t_list *node=NULL;
-//     ft_lstadd_front(&node, node0);
-//     ft_lstadd_front(&node, node1);
-//     ft_lstadd_front(&node, node2);
-//     t_list *last=ft_lstlast(node);
-//     printf("%s\n",(char *)node->content);
-
-// }

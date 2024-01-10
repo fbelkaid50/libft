@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:07:44 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/29 21:27:59 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/05 19:26:47 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	srcsize;
 
 	i = 0;
-	srcsize = strlen(src);
-	if (!dst || !src)
-		return (0);
+	srcsize = ft_strlen(src);
 	if (dstsize != 0)
 	{
 		while (src[i] != '\0' && i < (dstsize - 1))

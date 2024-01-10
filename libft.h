@@ -6,16 +6,14 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 13:06:28 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/29 17:32:52 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/04 20:32:09 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 typedef struct s_list

@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 07:49:57 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/17 10:38:30 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/05 18:51:28 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	num = 0;
 	while ((*str == ' ') || (*str >= 9 && *str <= 13))
-	{
 		str++;
-	}
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')

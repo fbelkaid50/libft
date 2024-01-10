@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:45:11 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/29 20:25:11 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/05 23:21:43 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ static char	*is_negative(int n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	long	nbr;
 
 	if (n == 0)
 	{
@@ -88,7 +87,6 @@ char	*ft_itoa(int n)
 		str[1] = '\0';
 		return (str);
 	}
-	nbr = n;
 	if (n < 0)
 		str = is_negative(n);
 	if (n > 0)

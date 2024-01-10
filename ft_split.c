@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:46:18 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/30 19:48:16 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/05 22:14:23 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,15 +77,4 @@ char	**ft_split(char const *s, char c)
 	}
 	p[a] = NULL;
 	return (p);
-}
-int main ()
-{
-	char *c = "ouhci lis 0 siudutfud0 uhdiudiud0 d0d doihdd0dwdad00d";
-	char **res;
-	res= ft_split(c,'0');
-	while (*res)
-	{
-	printf("%s\n",*res);
-	res ++;
-	}
 }

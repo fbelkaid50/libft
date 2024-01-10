@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 10:19:57 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/17 08:20:34 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/04 01:43:29 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	if (j < dstsize)
 		dst[j] = '\0';
-	res = j + strlen(src) - i;
+	res = j + ft_strlen(src) - i;
 	return (res);
 }

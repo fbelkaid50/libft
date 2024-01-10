@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:25:03 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/29 23:18:16 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/03 22:22:35 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*tmp;
 
-	if (!s)
-		return (0);
 	tmp = (char *)s;
 	while (*tmp)
 	{

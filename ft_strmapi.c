@@ -6,7 +6,7 @@
 /*   By: fbelkaid <fbelkaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 08:42:07 by fbelkaid          #+#    #+#             */
-/*   Updated: 2023/12/29 20:34:25 by fbelkaid         ###   ########.fr       */
+/*   Updated: 2024/01/05 19:21:04 by fbelkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
 	str = ft_strdup(s);
-	if (!s || !(str))
-		return (0);
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
